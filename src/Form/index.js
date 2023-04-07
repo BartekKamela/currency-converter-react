@@ -1,7 +1,10 @@
 import "./style.css";
+import { useState } from "react";
 import { currencies } from "../currencies.js";
 
 const Form = (props) => {
+    const [amount, setAmount] = useState("");
+
     const onFormSubmit = (event) => {
         event.preventDefault();
     };
@@ -13,8 +16,18 @@ const Form = (props) => {
                     <p className="form__amount">
                         <label>
                             Podaj kwotę*: &nbsp; 
-                            <input className="form__amountInput" name="amount" type="number"
-                                min="0" step="0.01" placeholder="Wpisz kwotę" required />
+                            <input
+                                value={amount} 
+                                className="form__amountInput" 
+                                name="amount" 
+                                type="number"
+                                min="0" 
+                                step="0.01" 
+                                placeholder="Wpisz kwotę" 
+                                autoFocus
+                                required
+                                onChange={({ target }) => setAmount(target.value)}
+                             />
                         </label>
                     </p>
                     <fieldset className="from__options">
