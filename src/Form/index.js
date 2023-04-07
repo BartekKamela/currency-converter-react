@@ -21,7 +21,7 @@ const Form = (props) => {
                         <p>
                             <label className="form__currencyA">
                                 Mam:
-                                <select className="form__currencyIN" name="fromCurrency">
+                                <select className="form__currency" name="fromCurrency">
                                     <option value="PLN">PLN</option>
                                     <option value="EUR">EUR</option>
                                     <option value="USD">USD</option>
@@ -34,7 +34,7 @@ const Form = (props) => {
                             </button>
                             <label className="form__currencyB">
                                 Chcę:
-                                <select className="form__currencyOUT" name="forCurrency">
+                                <select className="form__currency" name="forCurrency">
                                     <option value="PLN">PLN</option>
                                     <option value="EUR" selected>EUR</option>
                                     <option value="USD">USD</option>

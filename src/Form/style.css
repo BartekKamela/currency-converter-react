@@ -70,25 +70,17 @@
     margin-right: 20px;
 }
 
-.form__currencyIN {
+.form__currency {
     border: solid;
     border-width: 0px;
     border-radius: 5px;
-    box-shadow: 0px 0px 3px grey;
+    box-shadow: 0px 0px 3px #808080;
     background-color: #ffffff;
 }
 
 .form__currencyB {
     margin-left: 12px;
     padding: 10px;
-}
-
-.form__currencyOUT {
-    border: solid;
-    border-width: 0px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 3px #808080;
-    background-color: #ffffff;
 }
 
 .form__button {
