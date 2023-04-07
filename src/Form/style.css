@@ -1,0 +1,135 @@
+.form {
+    max-width: 350px;
+    margin: 5px auto;
+}
+
+.form__amount {
+    font-style: italic;
+    text-align: left;
+    padding-bottom: 10px;
+    margin-left: 10px;
+}
+
+.form_amountLabel {
+    padding-left: 5px;
+    margin-right: 17px;
+}
+
+.form__amountInput {
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    text-align: left;
+    box-shadow: 0px 0px 3px grey;
+    padding-left: 10px;
+}
+
+.form__fieldset {
+    border-width: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px 20px #000000;
+    background: linear-gradient(to right, #e4e4e4f7, #ebebebe8);
+
+}
+
+.form__legend {
+    font-family: 'Lato', sans-serif;
+    padding: 3px 20px;
+    margin: 0 auto;
+    border: solid;
+    border-width: 1px;
+    border-radius: 6px;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    background-color: #000000;
+    box-shadow: 0px 0px 19px #8080808a;
+}
+
+.from__options {
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: solid;
+    border-width: 0px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    background-color: #ffffff59;
+    ;
+    box-shadow: 0px 0px 3px grey;
+}
+
+.form__optionsLegend {
+    margin-left: 15px;
+    text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff;
+}
+
+.form__currencyA {
+    margin-left: 11px;
+    margin-right: 20px;
+}
+
+.form__currencyIN {
+    border: solid;
+    border-width: 0px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px grey;
+    background-color: #ffffff;
+}
+
+.form__currencyB {
+    margin-left: 12px;
+    padding: 10px;
+}
+
+.form__currencyOUT {
+    border: solid;
+    border-width: 0px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px #808080;
+    background-color: #ffffff;
+}
+
+.form__button {
+    color: #000000;
+    cursor: pointer;
+    border-width: 0px;
+    border-radius: 15px;
+    background-color: #e6e6e6;
+    outline: 1px solid #0000007d;
+}
+
+.form__button:hover {
+    color: black;
+    cursor: pointer;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 15px #0000005e;
+    outline: 1px solid #0000007d;
+}
+
+.form__button:active {
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.form__buttonParagraph {
+    text-align: center;
+}
+
+.form__button--count {
+    padding: 3px 30px;
+}
+
+.form__result {
+    text-align: center;
+    line-height: 1.7;
+    border-radius: 30px;
+    background: radial-gradient(circle, #ffffffa6 0%, #ffffff08 90%);
+}
+
+.form__exchangeCourse {
+    font-size: x-small;
+    text-align: center;
+}
