@@ -1,4 +1,5 @@
 import "./style.css";
+import { currencies } from "../currencies.js";
 
 const Form = (props) => {
     const onFormSubmit = (event) => {
@@ -22,11 +23,14 @@ const Form = (props) => {
                             <label className="form__currencyA">
                                 Mam:
                                 <select className="form__currency" name="fromCurrency">
-                                    <option value="PLN">PLN</option>
-                                    <option value="EUR">EUR</option>
-                                    <option value="USD">USD</option>
-                                    <option value="GBP">GBP</option>
-                                    <option value="CHF">CHF</option>
+                                    {currencies.map((currency) => (
+                                        <option
+                                            key={currency.id}
+                                            value={currency.name}
+                                        >
+                                            {currency.name}
+                                        </option>
+                                    ))}
                                 </select>
                             </label>
                             <button type="button" className="form__button">
@@ -35,12 +39,14 @@ const Form = (props) => {
                             <label className="form__currencyB">
                                 Chcę:
                                 <select className="form__currency" name="forCurrency">
-                                    <option value="PLN">PLN</option>
-                                    <option value="EUR" selected>EUR</option>
-                                    <option value="USD">USD</option>
-                                    <option value="GBP">GBP</option>
-                                    <option value="CHF">CHF</option>
-
+                                    {currencies.map((currency) => (
+                                        <option
+                                            key={currency.id}
+                                            value={currency.name}
+                                        >
+                                            {currency.name}
+                                        </option>
+                                    ))}
                                 </select>
                             </label>
                         </p>
