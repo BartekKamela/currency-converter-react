@@ -4,6 +4,8 @@ import { currencies } from "../currencies.js";
 
 const Form = (props) => {
     const [amount, setAmount] = useState("");
+    const [currencyIn, setCurrencyIn] = useState(currencies[0].name);
+    const [currencyOut, setCurrencyOut] = useState(currencies[1].name);
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -35,7 +37,12 @@ const Form = (props) => {
                         <p>
                             <label className="form__currencyA">
                                 Mam:
-                                <select className="form__currency" name="fromCurrency">
+                                <select
+                                    value={currencyIn}
+                                    className="form__currency" 
+                                    name="fromCurrency"
+                                    onChange={({ target }) => setCurrencyIn(target.value)}
+                                >
                                     {currencies.map((currency) => (
                                         <option
                                             key={currency.id}
@@ -51,7 +58,12 @@ const Form = (props) => {
                             </button>
                             <label className="form__currencyB">
                                 Chcę:
-                                <select className="form__currency" name="forCurrency">
+                                <select 
+                                    value={currencyOut}
+                                    className="form__currency" 
+                                    name="forCurrency"
+                                    onChange={({ target }) => setCurrencyOut(target.value)}
+                                >
                                     {currencies.map((currency) => (
                                         <option
                                             key={currency.id}
