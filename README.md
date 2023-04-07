@@ -1,3 +1,41 @@
+# Content of Project
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [DEMO](#DEMO)
+* [Available Scripts](#available-scripts)
+
+## General Info
+This is a currency calculator created first in Vanilla.js and moved to React.js\
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+## Technologies
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<ul>
+<li>Alternative CSS box model</li>
+<li>Normalize.css</li>
+<li>Flex</li>
+</ul>
+<li>JavaScript - ES6</li>
+<ul>
+<li>Node.js</li>
+<li>React.js</li>
+<li>Create React App</li>
+<li>Babel</li>
+<li>Webpack</li>
+<li>JSX</li>
+</ul>
+<li>CamelCase naming convention</li>
+<li>BEM naming convention</li>
+<li>Markdown</li>
+</ul>
+
+## DEMO
+![demo](https://bartekkamela.github.io/currency-converter/images/demo.gif)
+
+You can visit this website here:
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
