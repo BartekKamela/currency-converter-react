@@ -1,12 +1,18 @@
 import "./style.css";
 
-const Form = (props) => (
-    <form className="form">
+const Form = (props) => {
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+    };
+
+    return (
+    <form className="form" onSubmit={onFormSubmit}>
                 <fieldset className="form__fieldset">
                     <legend className="form__legend">KALKULATOR WALUT</legend>
                     <p className="form__amount">
                         <label>
-                            Podaj kwotę*: &nbsp; <input className="form__amountInput" name="amount" type="number"
+                            Podaj kwotę*: &nbsp; 
+                            <input className="form__amountInput" name="amount" type="number"
                                 min="0" step="0.01" placeholder="Wpisz kwotę" required />
                         </label>
                     </p>
@@ -48,6 +54,7 @@ const Form = (props) => (
                     </p>
                 </fieldset>
             </form>
-);
+    )
+};
 
 export default Form;
