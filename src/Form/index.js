@@ -7,7 +7,7 @@ const Form = ({ result, calculatedResult }) => {
     const [currencyIn, setCurrencyIn] = useState(currencies[0].name);
     const [currencyOut, setCurrencyOut] = useState(currencies[1].name);
 
-    const click = () => {
+    const changeCurrency = () => {
         setCurrencyIn(currencyOut);
         setCurrencyOut(currencyIn);
     };
@@ -59,7 +59,7 @@ const Form = ({ result, calculatedResult }) => {
                                     ))}
                                 </select>
                             </label>
-                            <button type="button" className="form__button" onClick={click}>
+                            <button type="button" className="form__button" onClick={changeCurrency}>
                                 &#10234;
                             </button>
                             <label className="form__currencyB">
