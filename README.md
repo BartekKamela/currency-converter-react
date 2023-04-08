@@ -33,12 +33,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 </ul>
 
 ## DEMO
-![demo](https://bartekkamela.github.io/currency-converter/images/demo.gif)
+![demo](https://bartekkamela.github.io/currency-converter-react/demo.gif)
 
-You can visit this website here:
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You can visit this website here: [Currency Converter React](https://bartekkamela.github.io/currency-converter-react)
 
 ## Available Scripts
 
