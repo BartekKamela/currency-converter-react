@@ -117,13 +117,6 @@
     padding: 3px 30px;
 }
 
-.form__result {
-    text-align: center;
-    line-height: 1.7;
-    border-radius: 30px;
-    background: radial-gradient(circle, #ffffffa6 0%, #ffffff08 90%);
-}
-
 .form__exchangeCourse {
     font-size: x-small;
     text-align: center;

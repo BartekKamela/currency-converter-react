@@ -1,8 +1,9 @@
 import "./style.css";
+import Result from "./Result";
 import { useState } from "react";
 import { currencies } from "../currencies.js";
 
-const Form = ({ result, calculatedResult }) => {
+const Form = ({ result, calculateResult }) => {
     const [amount, setAmount] = useState("");
     const [currencyIn, setCurrencyIn] = useState(currencies[0].name);
     const [currencyOut, setCurrencyOut] = useState(currencies[1].name);
@@ -14,7 +15,7 @@ const Form = ({ result, calculatedResult }) => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        calculatedResult(amount, currencyIn, currencyOut);
+        calculateResult(amount, currencyIn, currencyOut);
     };
 
     return (
@@ -85,9 +86,7 @@ const Form = ({ result, calculatedResult }) => {
                     <p className="form__buttonParagraph">
                         <button className="form__button form__button--count">Przelicz</button>
                     </p>
-                    <p className="form__result">Kwota po przeliczeniu: <br /> 
-                       {result}
-                    </p>
+                    <Result result={result} />
                     <p className="form__exchangeCourse">
                         Kurs walut z dnia 23.01.2023 r. według średniego kursu walut NBP.
                     </p>
