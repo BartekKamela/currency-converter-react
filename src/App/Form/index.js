@@ -28,9 +28,9 @@ const Form = ({ result, calculateResult }) => {
                             <input
                                 value={amount} 
                                 className="form__amountInput" 
-                                name="amount" 
                                 type="number"
-                                min="0" 
+                                min="0"
+                                max="9999999999"
                                 step="0.01" 
                                 placeholder="Wpisz kwotę" 
                                 autoFocus
@@ -46,9 +46,8 @@ const Form = ({ result, calculateResult }) => {
                                 Mam:
                                 <select
                                     value={currencyIn}
-                                    className="form__currency" 
-                                    name="fromCurrency"
                                     onChange={({ target }) => setCurrencyIn(target.value)}
+                                    className="form__currency" 
                                 >
                                     {currencies.map((currency) => (
                                         <option
@@ -67,9 +66,8 @@ const Form = ({ result, calculateResult }) => {
                                 Chcę:
                                 <select 
                                     value={currencyOut}
-                                    className="form__currency" 
-                                    name="forCurrency"
                                     onChange={({ target }) => setCurrencyOut(target.value)}
+                                    className="form__currency" 
                                 >
                                     {currencies.map((currency) => (
                                         <option
