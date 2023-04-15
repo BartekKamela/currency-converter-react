@@ -24,11 +24,9 @@ const Clock = () => {
                     month: "long",
                     weekday: "long",
                     day: "numeric",
-                    year: "numeric"
                 },
             )}
-            {" r. "}
-            godz.&nbsp;
+            {" "}
             {date.toLocaleTimeString("pl-PL")}
         </div>
     )
