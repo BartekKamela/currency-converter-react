@@ -60,7 +60,7 @@ const Form = ({ result, calculateResult }) => {
                             </select>
                         </label>
                         <button type="button" className="form__button" onClick={changeCurrency}>
-                            &#10234;
+                            {"<=>"}
                         </button>
                         <label className="form__currencyB">
                             Chcę:
