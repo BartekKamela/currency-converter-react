@@ -16,7 +16,7 @@ const Clock = () => {
 
 
     return (
-        <header className="clock">
+        <div className="clock">
             Dzisiaj jest&nbsp;
             {date.toLocaleString(
                 "pl-PL",
@@ -30,7 +30,7 @@ const Clock = () => {
             {" r. "}
             godz.&nbsp;
             {date.toLocaleTimeString("pl-PL")}
-        </header>
+        </div>
     )
 };
 

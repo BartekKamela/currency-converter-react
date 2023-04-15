@@ -1,5 +1,4 @@
 import './App.css';
-import Clock from "./Clock";
 import Form from "./Form";
 import Footer from "./Footer";
 import { useState } from 'react';
@@ -23,7 +22,6 @@ function App() {
 
   return (
     <div>
-        <Clock />
         <main>
             <Form 
               result={result} 
