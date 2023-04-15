@@ -4,8 +4,8 @@ const Result = ({ result }) => (
         Kwota po przeliczeniu: <br />
         {result !== undefined && (
             <>
-                {result.sourceAmount.toFixed(2)}&nbsp;{result.sourceCurrency}&nbsp;=&nbsp;
-
+                {result.sourceAmount.toFixed(2)}&nbsp;{result.sourceCurrency}&nbsp;=
+                {" "}
                 <strong>
                     {result.targetAmount.toFixed(2)}&nbsp;{result.targetCurrency}
                 </strong>
