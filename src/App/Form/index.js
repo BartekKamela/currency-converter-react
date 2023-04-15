@@ -35,7 +35,6 @@ const Form = ({ result, calculateResult }) => {
                             max="9999999999"
                             step="0.01"
                             placeholder="Wpisz kwotę"
-                            autoFocus
                             required
                             onChange={({ target }) => setAmount(target.value)}
                         />
