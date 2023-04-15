@@ -6,9 +6,19 @@ const Clock = () => {
 
     return (
         <header className="clock">
-            Dzisiaj jest {date.toLocaleString("pl-PL",
-                { hour: "2-digit", minute: "2-digit", second: "2-digit", month: "long", weekday: "long", day: "numeric", year: "numeric" },
+            Dzisiaj jest&nbsp;
+            {date.toLocaleString(
+                "pl-PL",
+                {
+                    month: "long",
+                    weekday: "long",
+                    day: "numeric",
+                    year: "numeric"
+                },
             )}
+            {" r. "}
+            godz.&nbsp;
+            {date.toLocaleTimeString("pl-PL")}
         </header>
     )
 };
