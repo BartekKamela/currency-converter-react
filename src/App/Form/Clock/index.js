@@ -26,7 +26,7 @@ const Clock = () => {
                     day: "numeric",
                 },
             )}
-            {" "}
+            {", "}
             {date.toLocaleTimeString("pl-PL")}
         </div>
     )
