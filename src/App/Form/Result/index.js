@@ -1,4 +1,5 @@
 import './style.css';
+
 const Result = ({ result }) => (
     <p className="form__result">
         Kwota po przeliczeniu: <br />
