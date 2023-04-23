@@ -20,7 +20,7 @@ function App() {
   };
 
   return (
-    <div>
+      <div>
         <main>
             <Form 
               result={result} 
@@ -28,7 +28,7 @@ function App() {
             />
         </main>
         <Footer />
-    </div>
+      </div>
   );
 };
 

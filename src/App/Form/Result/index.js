@@ -1,7 +1,7 @@
-import './style.css';
+ import { StyledResult } from "./styled"
 
 const Result = ({ result }) => (
-    <p className="form__result">
+    <StyledResult>
         Kwota po przeliczeniu: <br />
         {result !== undefined && (
             <>
@@ -12,7 +12,7 @@ const Result = ({ result }) => (
                 </strong>
             </>
         )}
-    </p>
+    </StyledResult>
 );
 
 export default Result;

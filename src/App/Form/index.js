@@ -1,6 +1,10 @@
-import "./style.css";
 import Result from "./Result";
 import Clock from "./Clock";
+import {
+    StyledForm, FormFieldset, FormLegend, Amount, Label, Input,
+    Fieldset, Legend, CurrencyIn, CurrencyOut, Select,
+    Wrapper, Button, ButtonCount
+} from "./styled";
 import { useState } from "react";
 import { currencies } from "../currencies.js";
 
@@ -20,16 +24,15 @@ const Form = ({ result, calculateResult }) => {
     };
 
     return (
-        <form className="form" onSubmit={onFormSubmit}>
-            <fieldset className="form__fieldset">
-                <legend className="form__legend">KALKULATOR WALUT</legend>
+        <StyledForm onSubmit={onFormSubmit}>
+            <FormFieldset>
+                <FormLegend>KALKULATOR WALUT</FormLegend>
                 <Clock />
-                <p className="form__amount">
-                    <label>
+                <Amount>
+                    <Label>
                         Podaj kwotę*: &nbsp;
-                        <input
+                        <Input
                             value={amount}
-                            className="form__amountInput"
                             type="number"
                             min="0"
                             max="9999999999"
@@ -38,17 +41,16 @@ const Form = ({ result, calculateResult }) => {
                             required
                             onChange={({ target }) => setAmount(target.value)}
                         />
-                    </label>
-                </p>
-                <fieldset className="from__options">
-                    <legend className="form__optionsLegend">Wybierz waluty</legend>
+                    </Label>
+                </Amount>
+                <Fieldset>
+                    <Legend>Wybierz waluty</Legend>
                     <p>
-                        <label className="form__currencyA">
+                        <CurrencyIn>
                             Mam:
-                            <select
+                            <Select
                                 value={currencyIn}
                                 onChange={({ target }) => setCurrencyIn(target.value)}
-                                className="form__currency"
                             >
                                 {currencies.map((currency) => (
                                     <option
@@ -58,17 +60,16 @@ const Form = ({ result, calculateResult }) => {
                                         {currency.name}
                                     </option>
                                 ))}
-                            </select>
-                        </label>
-                        <button type="button" className="form__button" onClick={changeCurrency}>
+                            </Select>
+                        </CurrencyIn>
+                        <Button type="button" onClick={changeCurrency}>
                             {"<=>"}
-                        </button>
-                        <label className="form__currencyB">
+                        </Button>
+                        <CurrencyOut>
                             Chcę:
-                            <select
+                            <Select
                                 value={currencyOut}
                                 onChange={({ target }) => setCurrencyOut(target.value)}
-                                className="form__currency"
                             >
                                 {currencies.map((currency) => (
                                     <option
@@ -78,19 +79,17 @@ const Form = ({ result, calculateResult }) => {
                                         {currency.name}
                                     </option>
                                 ))}
-                            </select>
-                        </label>
+                            </Select>
+                        </CurrencyOut>
                     </p>
-                </fieldset>
-                <p className="form__buttonParagraph">
-                    <button className="form__button form__button--count">Przelicz</button>
-                </p>
+                </Fieldset>
+                <ButtonCount>Przelicz</ButtonCount>
                 <Result result={result} />
-                <p className="form__exchangeCourse">
+                <Wrapper>
                     Kurs walut z dnia 23.01.2023 r. według średniego kursu walut NBP.
-                </p>
-            </fieldset>
-        </form>
+                </Wrapper>
+            </FormFieldset>
+        </StyledForm>
     )
 };
 
