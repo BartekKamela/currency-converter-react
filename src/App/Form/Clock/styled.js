@@ -4,8 +4,8 @@ export const Div = styled.div`
     margin-top: 15px;
     margin-bottom: 20px;
     margin-right: 5px;
-    font-family: monospace;
+    font-family: ${({ theme }) => theme.font.monospace};
     font-size: xx-small;
     text-align: right;
-    color: #000000;
+    color: ${({ theme }) => theme.color.black};
 `;

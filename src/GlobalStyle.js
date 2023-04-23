@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 import background from "./dolars.png";
+
 
 export const GlobalStyle = createGlobalStyle`
     html {
@@ -11,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     #root {
-        font-family: 'Lato', sans-serif;
+        font-family: ${({ theme }) => theme.font.lato};
         margin: auto;
         display: flex;
         justify-content: center;

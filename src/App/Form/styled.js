@@ -20,10 +20,10 @@ export const FormLegend = styled.legend`
     border: solid;
     border-width: 1px;
     border-radius: 6px;
-    color: #ffffff;
+    color: ${({ theme })=> theme.color.white};
     font-weight: bold;
     letter-spacing: 1.5px;
-    background-color: #000000;
+    background-color: ${({ theme })=> theme.color.black};
     box-shadow: 0px 0px 19px #8080808a;
 `;
 
@@ -43,7 +43,7 @@ export const Input = styled.input`
     width: 200px;
     border: none;
     border-radius: 5px;
-    background-color: #ffffff;
+    background-color: ${({ theme })=> theme.color.white};
     text-align: left;
     box-shadow: 0px 0px 3px grey;
     padding-left: 10px;
@@ -57,7 +57,7 @@ export const Fieldset = styled.fieldset`
     border-width: 0px;
     margin-bottom: 30px;
     border-radius: 6px;
-    background-color: #ffffff59;
+    background-color: #ffffff50;
     box-shadow: 0px 0px 3px grey;
 `;
 
@@ -83,22 +83,22 @@ export const Select = styled.select`
     border-width: 0px;
     border-radius: 5px;
     box-shadow: 0px 0px 3px #808080;
-    background-color: #ffffff;
+    background-color: ${({ theme })=> theme.color.white};
 `;
 
 export const Button = styled.button`
-    color: #000000;
+    color: ${({ theme })=> theme.color.black};
     cursor: pointer;
     border-width: 0px;
     border-radius: 15px;
-    background-color: #e6e6e6;
+    background-color: ${({ theme })=> theme.color.mercury};
     outline: 1px solid #0000007d;
     transition: 0.5s;
 
     &:hover {
-        color: black;
+        color: ${({ theme })=> theme.color.black};
         cursor: pointer;
-        background-color: #ffffff;
+        background-color: ${({ theme })=> theme.color.white};
         box-shadow: 0px 0px 15px #0000005e;
         outline: 1px solid #0000007d;
         transition: 0.5s;
@@ -106,25 +106,24 @@ export const Button = styled.button`
 
     &:active {
         cursor: pointer;
-        color: #ffffff;
-        background-color: #000000;
+        color: ${({ theme })=> theme.color.white};
+        background-color: ${({ theme })=> theme.color.black};
     }
 `;
 
 export const ButtonCount = styled.button`
     padding: 3px 30px;
-    color: #000000;
+    color: ${({ theme })=> theme.color.black};
     cursor: pointer;
     border-width: 0px;
     border-radius: 15px;
-    background-color: #e6e6e6;
+    background-color: ${({ theme })=> theme.color.mercury};
     outline: 1px solid #0000007d;
     transition: 0.5s;
 
     &:hover {
-        color: black;
         cursor: pointer;
-        background-color: #ffffff;
+        background-color: ${({ theme })=> theme.color.white};
         box-shadow: 0px 0px 15px #0000005e;
         outline: 1px solid #0000007d;
         transition: 0.5s;
@@ -132,8 +131,8 @@ export const ButtonCount = styled.button`
 
     &:active {
         cursor: pointer;
-        color: #ffffff;
-        background-color: #000000;
+        color: ${({ theme })=> theme.color.white};
+        background-color: ${({ theme })=> theme.color.black};
     }
 `;
 
