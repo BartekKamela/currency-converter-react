@@ -1,8 +1,12 @@
 # Content of Project
-* [General info](#general-info)
-* [Technologies](#technologies)
-* [DEMO](#DEMO)
-* [Available Scripts](#available-scripts)
+- [Content of Project](#content-of-project)
+  - [General Info](#general-info)
+  - [Technologies](#technologies)
+  - [DEMO](#demo)
+  - [Available Scripts](#available-scripts)
+    - [`npm start`](#npm-start)
+    - [`npm run build`](#npm-run-build)
+    - [`npm run eject`](#npm-run-eject)
 
 ## General Info
 This is a currency calculator created first in Vanilla.js and moved to React.js\
@@ -26,6 +30,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 <li>Babel</li>
 <li>Webpack</li>
 <li>JSX</li>
+<li>Styled Components<li>
+<li>Hooks: useState, useEffect, custom Hook<li>
 </ul>
 <li>CamelCase naming convention</li>
 <li>BEM naming convention</li>
