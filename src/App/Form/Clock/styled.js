@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Div = styled.div`
+export const StyledClock = styled.div`
     margin-top: 15px;
     margin-bottom: 20px;
     margin-right: 5px;
