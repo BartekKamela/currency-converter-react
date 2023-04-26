@@ -1,7 +1,7 @@
 import { useCurrentDate } from './useCurrentDate';
-import { Div } from "./styled";
+import { StyledClock } from "./styled";
 
-const formattedDate = (date) =>
+const formatDate = (date) =>
     date.toLocaleString(undefined, {
         hour: '2-digit',
         minute: '2-digit',
@@ -15,9 +15,9 @@ const Clock = () => {
     const date = useCurrentDate();
 
     return (
-        <Div>
-            Dzisiaj jest {formattedDate(date)}
-        </Div>
+        <StyledClock>
+            Dzisiaj jest {formatDate(date)}
+        </StyledClock>
     )
 };
 
