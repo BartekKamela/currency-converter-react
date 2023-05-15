@@ -9,11 +9,10 @@ import { useState } from "react";
 import { currencies } from '../currencies';
 import { useRatesData } from "../useRatesData";
 
-
 const Form = () => {
     const [amount, setAmount] = useState("");
-    const [currencyIn, setCurrencyIn] = useState(currencies[0].name);
-    const [currencyOut, setCurrencyOut] = useState(currencies[1].name);
+    const [currencyIn, setCurrencyIn] = useState("PLN");
+    const [currencyOut, setCurrencyOut] = useState("EUR");
     const [result, setResult] = useState();
     const ratesData = useRatesData(currencyIn);
 
