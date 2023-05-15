@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 
-export const useRatesData = (currencyIn) => {
-    const API_URL = `https://api.exchangerate.host/latest?symbols=PLN,EUR,USD,GBP,CHF&base=${currencyIn}`;
+export const useRatesData = () => {
+    const API_URL = `https://api.exchangerate.host/latest`;
     const [ratesData, setRatesData] = useState({
         status: "loading"
     });
@@ -12,7 +12,7 @@ export const useRatesData = (currencyIn) => {
         const getRates = async () => {
             try {
                 const response = await axios.get(API_URL);
-
+                
                 setRatesData({
                     date: response.data.date,
                     rates: response.data.rates,
