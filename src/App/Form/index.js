@@ -23,13 +23,12 @@ const Form = () => {
     };
   
     const calculateResult = (amount, currencyIn, currencyOut) => {
-      const valueIn = currencies.find(({ name }) => name === currencyIn).value;
-      const valueOut = currencies.find(({ name }) => name === currencyOut).value;
-      const rate = ratesData.rates[currencyOut];
-  
+      const sourceRate = ratesData.rates[currencyIn];
+      const targetRate = ratesData.rates[currencyOut];
+     
       setResult({
         sourceAmount: +amount,
-        targetAmount: amount * rate,
+        targetAmount: (targetRate / sourceRate) * amount,
         sourceCurrency: currencyIn,
         targetCurrency: currencyOut
       });
