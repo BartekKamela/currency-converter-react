@@ -6,16 +6,34 @@ import {
     Wrapper, Button, ButtonCount
 } from "./styled";
 import { useState } from "react";
-import { currencies } from "../currencies.js";
+import { currencies } from '../currencies';
+import { useRatesData } from "../useRatesData";
 
-const Form = ({ result, calculateResult }) => {
+
+const Form = () => {
     const [amount, setAmount] = useState("");
     const [currencyIn, setCurrencyIn] = useState(currencies[0].name);
     const [currencyOut, setCurrencyOut] = useState(currencies[1].name);
+    const [result, setResult] = useState();
+    const ratesData = useRatesData(currencyIn);
 
     const changeCurrency = () => {
         setCurrencyIn(currencyOut);
         setCurrencyOut(currencyIn);
+    };
+  
+    const calculateResult = (amount, currencyIn, currencyOut) => {
+      const valueIn = currencies.find(({ name }) => name === currencyIn).value;
+      const valueOut = currencies.find(({ name }) => name === currencyOut).value;
+      const rate = ratesData.rates[currencyOut];
+  
+      setResult({
+        sourceAmount: +amount,
+        targetAmount: amount * rate,
+        sourceCurrency: currencyIn,
+        targetCurrency: currencyOut
+      });
+  
     };
 
     const onFormSubmit = (event) => {
@@ -86,7 +104,7 @@ const Form = ({ result, calculateResult }) => {
                 <ButtonCount>Przelicz</ButtonCount>
                 <Result result={result} />
                 <Wrapper>
-                    Kurs walut z dnia 23.01.2023 r. według średniego kursu walut NBP.
+                    Kurs walut z {ratesData.date} r. pobrane z Europejskiego Banku Centralnego.
                 </Wrapper>
             </FormFieldset>
         </StyledForm>
