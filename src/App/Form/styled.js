@@ -142,7 +142,14 @@ export const Wrapper = styled.p`
 
 export const Loading = styled.div`
 	text-align: center;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
+`;
+
+export const Loader = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
 `;
 
 export const Fail = styled.div`
