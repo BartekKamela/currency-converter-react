@@ -6,7 +6,6 @@ import {
     Wrapper, Button, ButtonCount, Loading, Fail
 } from "./styled";
 import { useState } from "react";
-import { currencies } from '../currencies';
 import { useRatesData } from "../useRatesData";
 
 const Form = () => {
