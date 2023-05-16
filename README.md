@@ -9,7 +9,11 @@
     - [`npm run eject`](#npm-run-eject)
 
 ## General Info
-This is a currency calculator created first in Vanilla.js and moved to React.js\
+This is a currency coverter created first in Vanilla.js and moved to React.js\
+In the application, you can convert the amount of currency into another currency.\
+The application downloads currencies from an open API.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
