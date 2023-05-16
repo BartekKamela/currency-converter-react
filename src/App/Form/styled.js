@@ -139,3 +139,14 @@ export const ButtonCount = styled.button`
 export const Wrapper = styled.p`
     font-size: x-small;
 `;
+
+export const Loading = styled.div`
+	text-align: center;
+	margin-bottom: 40px;
+`;
+
+export const Fail = styled.div`
+	text-align: center;
+	margin-bottom: 40px;
+	color: ${({ theme }) => theme.colors.red};
+`;
