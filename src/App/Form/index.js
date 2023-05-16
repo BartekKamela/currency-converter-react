@@ -3,10 +3,11 @@ import Clock from "./Clock";
 import {
     StyledForm, FormFieldset, FormLegend, Amount, Label, Input,
     Fieldset, Legend, CurrencyIn, CurrencyOut, Select,
-    Wrapper, Button, ButtonCount, Loading, Fail
+    Wrapper, Button, ButtonCount, Loading, Loader, Fail
 } from "./styled";
 import { useState } from "react";
 import { useRatesData } from "../useRatesData";
+import { DotSpinner } from '@uiball/loaders'
 
 const Form = () => {
     const [amount, setAmount] = useState("");
@@ -47,6 +48,13 @@ const Form = () => {
                     ? (
                         <>
                             <Loading>
+                                <Loader>
+                                    <DotSpinner
+                                        size={40}
+                                        speed={0.9}
+                                        color="black"
+                                    />
+                                </Loader>
                                 Pobieranie danych. Proszę czekać.
                             </Loading>
                         </>
@@ -101,7 +109,7 @@ const Form = () => {
                                                 value={currencyOut}
                                                 onChange={({ target }) => setCurrencyOut(target.value)}
                                             >
-                                               {Object.keys(ratesData.rates).map((currencyOut) => (
+                                                {Object.keys(ratesData.rates).map((currencyOut) => (
                                                     <option
                                                         key={currencyOut}
                                                         value={currencyOut}
