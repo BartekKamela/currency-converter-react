@@ -32,6 +32,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 <li>JSX</li>
 <li>Styled Components</li>
 <li>Hooks: useState, useEffect, custom Hook</li>
+<li>Axios</li>
 </ul>
 <li>CamelCase naming convention</li>
 <li>BEM naming convention</li>
