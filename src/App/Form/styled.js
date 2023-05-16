@@ -155,5 +155,9 @@ export const Loader = styled.div`
 export const Fail = styled.div`
 	text-align: center;
 	margin-bottom: 40px;
-	color: ${({ theme }) => theme.colors.red};
+	color: ${({ theme }) => theme.color.red};
+`;
+
+export const Date = styled.span`
+	font-weight: bold;
 `;
