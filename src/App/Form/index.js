@@ -83,12 +83,12 @@ const Form = () => {
                                                 value={currencyIn}
                                                 onChange={({ target }) => setCurrencyIn(target.value)}
                                             >
-                                                {currencies.map((currency) => (
+                                                {Object.keys(ratesData.rates).map((currencyIn) => (
                                                     <option
-                                                        key={currency.id}
-                                                        value={currency.name}
+                                                        key={currencyIn}
+                                                        value={currencyIn}
                                                     >
-                                                        {currency.name}
+                                                        {currencyIn}
                                                     </option>
                                                 ))}
                                             </Select>
@@ -102,12 +102,12 @@ const Form = () => {
                                                 value={currencyOut}
                                                 onChange={({ target }) => setCurrencyOut(target.value)}
                                             >
-                                                {currencies.map((currency) => (
+                                               {Object.keys(ratesData.rates).map((currencyOut) => (
                                                     <option
-                                                        key={currency.id}
-                                                        value={currency.name}
+                                                        key={currencyOut}
+                                                        value={currencyOut}
                                                     >
-                                                        {currency.name}
+                                                        {currencyOut}
                                                     </option>
                                                 ))}
                                             </Select>
