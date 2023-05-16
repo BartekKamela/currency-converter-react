@@ -3,7 +3,7 @@ import axios from "axios";
 
 
 export const useRatesData = () => {
-    const API_URL = `https://api.exchangerate.host/latest`;
+    const API_URL = `https://api.exchangerate.host/latest?symbols=PLN,EUR,USD,GBP,CHF`;
     const [ratesData, setRatesData] = useState({
         status: "loading"
     });
@@ -23,10 +23,11 @@ export const useRatesData = () => {
                 setRatesData({
                     status: "error"
                 });
+                console.error(error);
             }
         };
 
-        setTimeout(getRates, 1500);
+        setTimeout(getRates, 2500);
     }, []);
 
     return ratesData;
