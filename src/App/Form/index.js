@@ -3,7 +3,7 @@ import Clock from "./Clock";
 import {
     StyledForm, FormFieldset, FormLegend, Amount, Label, Input,
     Fieldset, Legend, CurrencyIn, CurrencyOut, Select,
-    Wrapper, Button, ButtonCount, Loading, Loader, Fail
+    Wrapper, Button, ButtonCount, Loading, Loader, Fail, Date
 } from "./styled";
 import { useState } from "react";
 import { useRatesData } from "../useRatesData";
@@ -124,7 +124,8 @@ const Form = () => {
                                 <ButtonCount>Przelicz</ButtonCount>
                                 <Result result={result} />
                                 <Wrapper>
-                                    Kurs walut pobrany z Europejskiego Banku Centralnego z {ratesData.date}.
+                                    Kursy walut pobierane są z Europejskiego Banku Centralnego.<br></br>
+                                    Aktualne na dzień: <Date>{ratesData.date}</Date>
                                 </Wrapper>
                             </>
                         )}
